@@ -1,0 +1,188 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #700202;
+    line-height: 1.6;
+}
+
+/* HEADER FIXE TRANSLUCIDE */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(3, 114, 226, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e803f9;
+}
+
+/* HERO SECTION */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url("images/formation.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 60px;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+.hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.btn-primary, .btn-secondary {
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #da03af;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0077dd;
+}
+
+.btn-secondary {
+    background: #de03c0;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #0055aa;
+}
+
+/* MAIN SECTIONS */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding-top: 50px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 45px;
+    box-shadow: 0 4px 12px rgba(196, 2, 226, 0.1);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* COMPÉTENCES – Cartes animées */
+#skills .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-box {
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(192, 2, 217, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(201, 3, 223, 0.25);
+}
+
+/* GALERIE */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 31%;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background: #7d02ae;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .gallery img {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+}
